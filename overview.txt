@@ -1,0 +1,60 @@
+
+<-------------> PRICE HISTORY APP <------------->
+
+---> OVERVIEW:
+===============================================================================
+The purpose of this project is to build a simple desktop app that will allow
+the user to search the price history data for any company they want using
+the TD Ameritrade API. Any of the code in here that I write is probably not
+that good. I am a beginner trying to learn the process of writing
+scripts and using git and GitHub. Any help or pointers would be appreciated.
+===============================================================================
+===============================================================================
+---> APP GOAL:
+(I want to make a few versions, each version being a finished "App" by itself.
+I'm hoping as I learn to complete a version, I will get better and be able to
+create the next. So far I have the first two version "Goals" typed out and
+will add to this later on.)
+===============================================================================
+---> VERSION 1:
+
+* Ask user for the company name & symbol that they want data for;
+
+* Then have a GUI window pop up with all the possible params
+      (1-Day, 2-Day, 1-Minute, 2-Minute, etc..)
+
+* Once user selects all the params, pass that information to the
+  fetch_price_history() func
+
+* Then take the returned data and use pandas to re shape the data into a
+| pandas df to be printed out.
+|
+---> Also, at the same time I want the re-shaped data to be stored in a SQLite
+|    database. All tables will be created based off the company symbol, and
+|    the price history params chosen. (EXAMPLE: PH_MSFT_1min)
+|
+---> If the table already exists, the data will be added instead of creating
+     a new table.
+
+* Once the data is re-shaped and saved to a SQLite database I want a message
+|  to pop up saying -->
+|  {company name}'s {frequency + frequencyType } Data Saved to {DB name}!
+|  Example: Microsoft's 1minute Data Saved to Main Database!
+---> include a button in the window that says 'Ok'
+
+* Finally, once the 'OK' button is clicked, a new GUI window will pop up
+  asking the user if they want to search for any other price history data
+===============================================================================
+---> VERSION 2: (This version will add on to the GUI)
+
+* create a window where all the information (params) are input at the same time
+  with a button that says "SUBMIT" to send the GET request
+
+* Have the reshaped data (pandas DF) show up in the GUI's window with
+  the same success message from version 1
+
+* Also include an option to view all the tables in the SQLite database that
+  is being used to store the returned data
+
+* Make it possible to view all the data in a selected table inside the GUI
+  window.
